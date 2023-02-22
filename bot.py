@@ -168,26 +168,23 @@ async def on_message(message):
 		await message.channel.send(answer)
 	else:
 		if int == 1:
-			if str(message.author.id) != "951600350945767474":
-				spn = f"\n\n{message.author.name}:"
-				print(message.author.id)
-				content = message.content
-				test_words = re.split(' ', content)
-				content1 = test_words
-				print(content1)
-				with open("edie-brain.edie", "r",encoding='utf-8') as f:
-					log = f.read()
-				chat_log = log
-				answer = ask(spn, content, chat_log)
-				log = append_interaction_to_chat_log(spn, content, answer, chat_log)
-				with open("edie-brain.edie", "w",encoding='utf-8') as f:
-					f.write(log)
-				with open("edie-chat-log.edie", "a",encoding='utf-8') as f:
-					f.write(f"{spn} {content}{start_sequence}{answer}")
-				await message.channel.send(answer)
-			
-			else:
-				return
+			spn = f"\n\n{message.author.name}:"
+			print(message.author.id)
+			content = message.content
+			test_words = re.split(' ', content)
+			content1 = test_words
+			print(content1)
+			with open("edie-brain.edie", "r",encoding='utf-8') as f:
+				log = f.read()
+			chat_log = log
+			answer = ask(spn, content, chat_log)
+			log = append_interaction_to_chat_log(spn, content, answer, chat_log)
+			with open("edie-brain.edie", "w",encoding='utf-8') as f:
+				f.write(log)
+			with open("edie-chat-log.edie", "a",encoding='utf-8') as f:
+				f.write(f"{spn} {content}{start_sequence}{answer}")
+			await message.channel.send(answer)
+
 
 
 
