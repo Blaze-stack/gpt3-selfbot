@@ -2,7 +2,7 @@
 - a gpt3 selfbot for people who want joni, this should work better than joni and be more efficient
 
 ## why not just relese joni?
-- at the moment joni is not ready for the public and the about of training data is over 13tb at this time
+- at the moment joni is not ready for the public and the about of training data is over 1tb at this time
 
 ## notice
 
